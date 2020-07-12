@@ -1,12 +1,12 @@
 # simpletime
   
 // Schedule describes a job's duty cycle.  
-		type Schedule interface {  
-			// Next returns the next activation time, later than the given time.  
-			// Next is invoked initially, and then each time the job is run.  
-			// If it is empty, it will be deleted.  
-			Next(time.Time) time.Time  
-		}  
+type Schedule interface {  
+&emsp;&emsp;&emsp;&emsp;// Next returns the next activation time, later than the given time.  
+&emsp;&emsp;&emsp;&emsp;// Next is invoked initially, and then each time the job is run.  
+&emsp;&emsp;&emsp;&emsp;// If it is empty, it will be deleted.  
+&emsp;&emsp;&emsp;&emsp;Next(time.Time) time.Time  
+}  
   
 // WrapFuncSchedule is a wrapper that turns a func(time.Time) time.Time into a Schedule.  
 type WrapFuncSchedule func(time.Time) time.Time  
