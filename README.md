@@ -20,3 +20,4 @@ entry.SetNotifyFunc(fn func())
 entry.Delete()
 
 utils.go: various wrap.
+
