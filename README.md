@@ -11,12 +11,13 @@ type Schedule interface {
 // WrapFuncSchedule is a wrapper that turns a func(time.Time) time.Time into a Schedule.  
 type WrapFuncSchedule func(time.Time) time.Time  
 func (fn WrapFuncSchedule) Next(t time.Time) time.Time { return fn(t) }  
-Various wrap: utils.go  
+###### Various wrap: utils.go  
   
+#### New
 timer := simpletime.NewTimer()  
 entry := timer.Schedule(s Schedule) *Entry  
   
-- Entry function:  
+#### Entry function
 entry.IsNil() bool  
 entry.SetNotifyFunc(fn func())  
 entry.Delete()  
